@@ -6,6 +6,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'Maven') {
+					echo "hello"
 					bat 'start cmd.exe /c mvn clean compile'
                 }
             }
