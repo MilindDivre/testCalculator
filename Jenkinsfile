@@ -17,6 +17,7 @@ pipeline {
             steps {
                 withMaven(maven : 'Maven') {
 					bat 'start mvn test'
+					writeFile file: '.archive-jenkins-maven-event-spy-logs', text: ''
                 }
             }
         }
