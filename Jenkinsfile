@@ -17,7 +17,7 @@ pipeline {
             steps {
                 withMaven(maven : 'Maven') {
 					bat 'start mvn test'
-					writeFile file: '.archive-jenkins-maven-event-spy-logs', text: ''
+					
                 }
             }
         }
@@ -26,7 +26,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 withMaven(maven : 'Maven') {
-					bat 'start cmd.exe mvn install'
+					bat 'start cmd.exe mvn deploy'
                 }
             }
         }
