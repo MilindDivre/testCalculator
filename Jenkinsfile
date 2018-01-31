@@ -16,7 +16,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'Maven') {
-					bat 'start mvn test'
+					bat 'mvn test'
 					
                 }
             }
