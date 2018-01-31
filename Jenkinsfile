@@ -25,7 +25,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 withMaven(maven : 'Maven') {
-					bat 'start cmd.exe mvn deploy'
+					bat 'start cmd.exe mvn install'
                 }
             }
         }
