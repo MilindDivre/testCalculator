@@ -1,5 +1,5 @@
 package testCalculator;
-
+//Build calculator application
 public class Calculator {
 	private int val1;
 	  private int val2;
